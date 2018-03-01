@@ -8,7 +8,7 @@
   "main": "rainfall.js",
   "scripts": {
     "start": "node rainfall.js",
-    //"test": "node test.js"
+    "test": 
   },
   "dependencies": {
     //"ejs": "^2.5.6",
