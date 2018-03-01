@@ -1,5 +1,5 @@
 var http = require('http');  
-http.createServer(function(req, res) {  
+var server = http.createServer(function(req, res) {  
   res.writeHead(200, {
     'Content-Type': 'text/html'
   });
@@ -103,5 +103,11 @@ writeme = fs.writeFile('rainfall3.txt', JSON.stringify(results));
 
   res.write("Rainfall Data = " + JSON.stringify(rainfall.data_rainfall(location)));
   res.end();
-}).listen(3000, '127.0.0.1');
+});
+server.listen(3000, '127.0.0.1');
 console.log('Server running at http://127.0.0.1:3000');
+//app.listen(process.env.PORT || 3000, function(){
+//  console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
+//});
+
+//
