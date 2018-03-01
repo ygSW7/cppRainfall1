@@ -104,10 +104,9 @@ writeme = fs.writeFile('rainfall3.txt', JSON.stringify(results));
   res.write("Rainfall Data = " + JSON.stringify(rainfall.data_rainfall(location)));
   res.end();
 });
-server.listen(3000, '127.0.0.1');
-console.log('Server running at http://127.0.0.1:3000');
-//app.listen(process.env.PORT || 3000, function(){
-//  console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
-//});
+server.listen(process.env.PORT || 3000, function(){
+  console.log("Express server listening on port %d in %s mode", this.address().port);
+});
 
-//
+//listen(3000, '127.0.0.1');
+//console.log('Server running at http://127.0.0.1:3000');
