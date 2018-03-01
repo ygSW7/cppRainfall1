@@ -1,0 +1,1 @@
+Rainfall Data = {"mean":1.2599999904632568,"median":1.2999999523162842,"standard_deviation":0.6066300272941589,"n":5}
