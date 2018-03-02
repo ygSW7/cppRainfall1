@@ -1,4 +1,3 @@
-
 var http = require('http');  
 var server = http.createServer(function(req, res) {  
   res.writeHead(200, {
@@ -10,8 +9,6 @@ var server = http.createServer(function(req, res) {
     '\n\n<h1>C++ Web App using Node.js NAN </h1>\n' + 
     '<div id="content"><p>Rain Fall Stat Data </p><ul><li>"average" </li><li>"mean"</li><li>"median"</li><li>"standard_deviation"</li></ul></div>' + 
     '\n\n');
-
-    <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon">
 
 var fs = require('fs');
 var json = require('json');
@@ -107,10 +104,9 @@ writeme = fs.writeFile('rainfall3.txt', JSON.stringify(results));
   res.write("Rainfall Data = " + JSON.stringify(rainfall.data_rainfall(location)));
   res.end();
 });
+server.listen(process.env.PORT || 3000, function(){
+  console.log("Express server listening on port %d in %s mode", this.address().port);
+});
 
-//server.listen(process.env.PORT || 3000, function(){
-//  console.log("Express server listening on port %d in %s mode", this.address().port);
-//});
-
-server.listen(3000, '127.0.0.1');
-console.log('Server running at http://127.0.0.1:3000');
+//listen(3000, '127.0.0.1');
+//console.log('Server running at http://127.0.0.1:3000');
