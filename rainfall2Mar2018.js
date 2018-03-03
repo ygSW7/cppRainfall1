@@ -1,10 +1,8 @@
-var express = require('express');
-var app = express();
 
-var http = require('http');
- 
+var http = require('http');  
 var server = http.createServer(function(req, res) {  
-  res.writeHead(200, {'Content-Type': 'text/html'
+  res.writeHead(200, {
+    'Content-Type': 'text/html'
   });
   res.write('<!doctype html>\n<html lang="en">\n' + 
     '\n<meta charset="utf-8">\n<title>C++ and node.js</title>\n' + 
@@ -12,19 +10,14 @@ var server = http.createServer(function(req, res) {
     '\n\n<h1>C++ Web App using Node.js NAN </h1>\n' + 
     '<div id="content"><p>Rain Fall Stat Data </p><ul><li>"average" </li><li>"mean"</li><li>"median"</li><li>"standard_deviation"</li></ul></div>' + 
     '\n\n');
-  
-
-  res.write('<form action="fileupload" method="post" enctype="multipart/form-data">');
-  res.write('<input type="file" name="filetoupload"><br>');
-  res.write('<input type="submit">');
-  res.write('</form>');
 
 var fs = require('fs');
 var json = require('json');
-readme = fs.readFile('rainfalldata.json','utf8',function(err, data){
+//readme = fs.readFile('readme.txt','utf8',function(err, data){
 //console.log(data)
-writeme = fs.writeFile('rainfall.txt', data);
-});
+//});
+
+//writeme = fs.writeFile('rainfall.txt', data);
 
 var rainfall = require("./cpp/build/Release/rainfall");
 var location = {
@@ -64,7 +57,7 @@ writeme = fs.writeFile('rainfall1.txt', "Average rain fall = " + rainfall.avg_ra
 console.log("Rainfall Data = " + JSON.stringify(rainfall.data_rainfall(location)));
 
 // write
-writeme = fs.writeFile('rainfall2.txt', "Rainfall Data = " + JSON.stringify(rainfall.data_rainfall(location, null, 2)));
+writeme = fs.writeFile('rainfall2.txt', "Rainfall Data = " + JSON.stringify(rainfall.data_rainfall(location)));
 
 // Part 3
 
@@ -109,7 +102,7 @@ writeme = fs.writeFile('rainfall3.txt', JSON.stringify(results));
   res.write("Average rain fall = " + rainfall.avg_rainfall(location) + "cm"+"<br>");
   res.write("<br>");
 
-  res.write("Rainfall Data = " + JSON.stringify(rainfall.data_rainfall(location, null, 2)));
+  res.write("Rainfall Data = " + JSON.stringify(rainfall.data_rainfall(location)));
   res.end();
 });
 
