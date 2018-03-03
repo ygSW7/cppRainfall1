@@ -24,6 +24,8 @@ var json = require('json');
 readme = fs.readFile('rainfalldata.json','utf8',function(err, data){
 //console.log(data)
 writeme = fs.writeFile('rainfall.txt', data);
+var location1 = data;
+console.log(location1)
 });
 
 var rainfall = require("./cpp/build/Release/rainfall");
@@ -111,14 +113,21 @@ writeme = fs.writeFile('rainfall3.txt', JSON.stringify(results));
 
   res.write("Rainfall Data = " + JSON.stringify(rainfall.data_rainfall(location, null, 2)));
   res.end();
-});
+}).listen(5000)//;
 
 //server.listen(process.env.PORT || 3000, function(){
-//  console.log("Express server listening on port %d in %s mode", this.address().port);
+//  console.log("Express server listening on port %d in %s mode", this.address().port, server.settings.env);
 //});
 //http.listen(process.env.PORT || 3000, function(){
 //  console.log('listening on', http.address().port);
 //});
 
-server.listen(3000, '127.0.0.1');
-console.log('Server running at http://127.0.0.1:3000');
+//.listen(5000)
+
+var port = process.env.PORT || 5000;
+server.listen(port, function() {
+  console.log("Listening on " + port);
+});
+
+//server.listen(3000, '127.0.0.1');
+//console.log('Server running at http://127.0.0.1:3000');
