@@ -1,1 +1,1 @@
-web node rainfall.js
+web: node rainfall.js
