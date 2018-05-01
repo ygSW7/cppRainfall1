@@ -25,7 +25,7 @@ var json = require('json');
 //writeme = fs.writeFile('rainfall.txt', data);
 var location1 = data;
 //console.log(location1)
-});
+//});
 /*  original from here */
 var rainfall = require("./cpp/build/Release/rainfall");
 var location = {
