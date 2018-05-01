@@ -19,7 +19,7 @@ var server = http.createServer(function(req, res) {
   //res.write('</form>');
 
 var fs = require('fs');
-//var json = require('json');
+var json = require('json');
 //readme = fs.readFile('rainfalldata.json','utf8',function(err, data){
 ////console.log(data);
 //writeme = fs.writeFile('rainfall.txt', data);
@@ -105,7 +105,7 @@ rainfall.calculate_results_async(locations,
   });
 
 //console.log("Async results probably still not here yet...")
-writeme = fs.writeFile('rainfall3.txt', JSON.stringify(results));
+//writeme = fs.writeFile('rainfall3.txt', JSON.stringify(results));
 
   res.write("Average rain fall = " + rainfall.avg_rainfall(location) + "cm"+"<br>");
   res.write("<br>");
