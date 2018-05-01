@@ -20,11 +20,11 @@ var server = http.createServer(function(req, res) {
 
 var fs = require('fs');
 var json = require('json');
-readme = fs.readFile('rainfalldata.json','utf8',function(err, data){
-//console.log(data);
-writeme = fs.writeFile('rainfall.txt', data);
+//readme = fs.readFile('rainfalldata.json','utf8',function(err, data){
+////console.log(data);
+//writeme = fs.writeFile('rainfall.txt', data);
 var location1 = data;
-console.log(location1)
+//console.log(location1)
 });
 /*  original from here */
 var rainfall = require("./cpp/build/Release/rainfall");
