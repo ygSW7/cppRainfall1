@@ -65,7 +65,7 @@ var print_rain_results = function(results) {
 //console.log("Rainfall Data = " + JSON.stringify(rainfall.data_rainfall(location)));
 
 // write
-writeme = fs.writeFile('rainfall2.txt', "Rainfall Data = " + JSON.stringify(rainfall.data_rainfall(location, null, 2)));
+//writeme = fs.writeFile('rainfall2.txt', "Rainfall Data = " + JSON.stringify(rainfall.data_rainfall(location, null, 2)));
 
 // Part 3
 
