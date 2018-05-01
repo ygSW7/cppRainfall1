@@ -19,7 +19,7 @@ var server = http.createServer(function(req, res) {
   res.write('</form>');
 
 var fs = require('fs');
-var json = require('json');
+//var json = require('json');
 //readme = fs.readFile('rainfalldata.json','utf8',function(err, data){
 ////console.log(data);
 //writeme = fs.writeFile('rainfall.txt', data);
@@ -56,13 +56,13 @@ var print_rain_results = function(results) {
 }
 
 // Part 1
-console.log("Average rain fall = " + rainfall.avg_rainfall(location) + "cm");
+//console.log("Average rain fall = " + rainfall.avg_rainfall(location) + "cm");
 // Write 
 ///writeme = fs.writeFile('rainfall1.txt', "Average rain fall = " + rainfall.avg_rainfall(location) + "cm");
   //res.write("Average rain fall = " + rainfall.avg_rainfall(location) + "cm"+ "\n\n");
 
 // Part 2
-console.log("Rainfall Data = " + JSON.stringify(rainfall.data_rainfall(location)));
+//console.log("Rainfall Data = " + JSON.stringify(rainfall.data_rainfall(location)));
 
 // write
 writeme = fs.writeFile('rainfall2.txt', "Rainfall Data = " + JSON.stringify(rainfall.data_rainfall(location, null, 2)));
