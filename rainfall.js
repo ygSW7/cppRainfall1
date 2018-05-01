@@ -13,10 +13,10 @@ var server = http.createServer(function(req, res) {
     '<div id="content"><p>Rain Fall Stat Data </p><ul><li>"average" </li><li>"mean"</li><li>"median"</li><li>"standard_deviation"</li></ul></div>' + 
     '\n\n');
   
-  res.write('<form action="fileupload" method="post" enctype="multipart/form-data">');
-  res.write('<input type="file" name="filetoupload"><br>');
-  res.write('<input type="submit">');
-  res.write('</form>');
+  //res.write('<form action="fileupload" method="post" enctype="multipart/form-data">');
+  //res.write('<input type="file" name="filetoupload"><br>');
+  //res.write('<input type="submit">');
+  //res.write('</form>');
 
 var fs = require('fs');
 //var json = require('json');
