@@ -1,5 +1,5 @@
 {
-  "name": "node-js-C++",
+  "name": "cpp-nodejs",
   "version": "0.3.0",
   "description": "A sample Node.js app using C++",
   "engines": {
