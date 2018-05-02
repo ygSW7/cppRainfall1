@@ -11,7 +11,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{D53320B5-2340-E592-103A-DD44F4BF8CDC}</ProjectGuid>
+    <ProjectGuid>{B3E446B6-C063-5A25-411E-E2A417FBA086}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>rainfall</RootNamespace>
     <IgnoreWarnCompileDuplicatedFilename>true</IgnoreWarnCompileDuplicatedFilename>
